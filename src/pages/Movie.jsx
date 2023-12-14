@@ -34,7 +34,7 @@ export const Movie = () => {
   useEffect(() => {
     const movieUrl = `${moviesURL}${id}?${apiKey}`;
     getMovie(movieUrl);
-  }, []);
+  }, [id]);
 
   return (
     <div className="movie-page">
@@ -44,7 +44,7 @@ export const Movie = () => {
           <p className="tagline">{movie.tagline}</p>
           <div className="info">
             <h3>
-              <BsWallet2 /> Orçamento
+              <BsWallet2 /> Orçamento:
             </h3>
             <p>{formatCurrency(movie.budget)}</p>
           </div>
@@ -56,7 +56,7 @@ export const Movie = () => {
           </div>
           <div className="info">
             <h3>
-              <BsHourglassSplit /> Duração
+              <BsHourglassSplit /> Duração:
             </h3>
             <p>{movie.runtime} minutos</p>
           </div>

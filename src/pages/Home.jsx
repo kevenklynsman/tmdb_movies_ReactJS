@@ -17,11 +17,8 @@ export const Home = () => {
 
   useEffect(() => {
     const topRatedUrl = `${moviesURL}top_rated?${apiKey}`;
-    console.log(topRatedUrl);
     getTopRatedMoveis(topRatedUrl);
   }, []);
-
-  console.log(topMovies);
 
   return (
     <div className="conteiner">
