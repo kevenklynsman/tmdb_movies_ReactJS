@@ -4,7 +4,7 @@ import { BiCameraMovie, BiSearchAlt2 } from "react-icons/bi";
 
 import "./Navbar.css";
 
-export const NavBar = () => {
+export const Navbar = () => {
   const [search, setSearch] = useState("");
   const navigate = useNavigate();
 
@@ -19,7 +19,7 @@ export const NavBar = () => {
 
   return (
     <>
-      <nav id="navbar">
+      <nav id="Navbar">
         <h2>
           <Link to="/">
             {" "}
