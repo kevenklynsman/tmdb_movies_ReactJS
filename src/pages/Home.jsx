@@ -22,7 +22,7 @@ export const Home = () => {
 
   return (
     <div className="conteiner">
-      <h2 className="title">Melhores filmes:</h2>
+      <h2 className="title">Melhores filmes</h2>
       <div className="movies-conteiner">
         {topMovies.length > 0 &&
           topMovies.map((movie) => <MovieCard key={movie.id} movie={movie} />)}

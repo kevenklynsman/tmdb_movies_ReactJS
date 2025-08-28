@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
 
 import { FaStar } from "react-icons/fa";
 
@@ -15,4 +16,14 @@ export const MovieCard = ({ movie, showLink = true }) => {
       {showLink && <Link to={`/movie/${movie.id}`}>Detalhes</Link>}
     </div>
   );
+};
+
+MovieCard.propTypes = {
+  movie: PropTypes.shape({
+    poster_path: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    vote_average: PropTypes.number.isRequired,
+    id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+  }).isRequired,
+  showLink: PropTypes.bool,
 };

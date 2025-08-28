@@ -8,12 +8,14 @@ export const Navbar = () => {
   const [search, setSearch] = useState("");
   const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const handleSearchSubmit = (event) => {
+    event.preventDefault();
 
-    if (!search) return;
+    const searchTerm = search.trim();
 
-    navigate(`/search?q=${search}`);
+    if (!searchTerm) return;
+
+    navigate(`/search?q=${searchTerm}`);
     setSearch("");
   };
 
@@ -22,11 +24,10 @@ export const Navbar = () => {
       <nav id="navbar">
         <h2>
           <Link to="/">
-            {" "}
             <BiCameraMovie /> MoviesLib
           </Link>
         </h2>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSearchSubmit}>
           <input
             type="text"
             placeholder="Busque um filme"
