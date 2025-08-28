@@ -35,3 +35,6 @@ export const Search = () => {
     </div>
   );
 };
+
+// traduza o texto a seguir: chore: update dependencies and improve code quality
+
