@@ -1,12 +1,9 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-
 .title { 
-  color: #f7d354;
+  color: var(--color-primary);
   font-size: 4rem;
   text-align: center;
   margin: 2rem 0 1rem;
-  font-family: 'Roboto', sans-serif;
 }
 
 .title .query-text {
@@ -24,12 +21,12 @@
 
 .movies-conteiner div {
   width: 30%;
-  color: #fff;
+  color: var(--color-text);
   margin-bottom: 2.5rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: #111;
+  background-color: var(--color-card);
   padding: 1rem;
 }
 
@@ -47,14 +44,14 @@
 }
 
 .movies-conteiner div svg {
-  color: #f7d354;
+  color: var(--color-primary);
 }
 
 .movies-conteiner div a {
-  background-color: #f7d354;
-  border: 2px solid #f7d354;
+  background-color: var(--color-primary);
+  border: 2px solid var(--color-primary);
   border-radius: 4px;
-  color: #000;
+  color: var(--color-primary-contrast);
   padding: 1rem 0.5rem;
   text-align: center;
   font-weight: bold;
@@ -63,5 +60,6 @@
 
 .movies-conteiner div a:hover {
   background-color: transparent;
-  color: #f7d354;
+  color: var(--color-primary);
+  border-color: var(--color-primary);
 }

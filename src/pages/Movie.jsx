@@ -39,34 +39,44 @@ export const Movie = () => {
   return (
     <div className="movie-page">
       {movie && (
-        <>
-          <MovieCard movie={movie} showLink={false} />
-          <p className="tagline">{movie.tagline}</p>
-          <div className="info">
-            <h3>
-              <BsWallet2 /> Orçamento:
-            </h3>
-            <p>{formatCurrency(movie.budget)}</p>
+        <div className="movie-grid">
+          <div className="left-column">
+            <MovieCard movie={movie} showLink={false} />
+            <p className="tagline">{movie.tagline}</p>
           </div>
-          <div className="info">
-            <h3>
-              <BsGraphUp /> Receita:
-            </h3>
-            <p>{formatCurrency(movie.revenue)}</p>
+
+          <div className="right-column">
+            <div className="info description">
+              <h3>
+                <BsFillFileEarmarkTextFill /> Descrição
+              </h3>
+              <p>{movie.overview}</p>
+            </div>
+
+            <div className="info-row">
+              <div className="info">
+                <h3>
+                  <BsWallet2 /> Orçamento:
+                </h3>
+                <p>{formatCurrency(movie.budget)}</p>
+              </div>
+
+              <div className="info">
+                <h3>
+                  <BsGraphUp /> Receita:
+                </h3>
+                <p>{formatCurrency(movie.revenue)}</p>
+              </div>
+
+              <div className="info">
+                <h3>
+                  <BsHourglassSplit /> Duração:
+                </h3>
+                <p>{movie.runtime} minutos</p>
+              </div>
+            </div>
           </div>
-          <div className="info">
-            <h3>
-              <BsHourglassSplit /> Duração:
-            </h3>
-            <p>{movie.runtime} minutos</p>
-          </div>
-          <div className="info description">
-            <h3>
-              <BsFillFileEarmarkTextFill /> Descrição
-            </h3>
-            <p>{movie.overview}</p> Descrição
-          </div>
-        </>
+        </div>
       )}
     </div>
   );

@@ -1,21 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+:root {
+  --color-bg: #000000;
+  --color-card: #0b0b0b;
+  --color-primary: #00b894;
+  --color-primary-hover: #33d6a7;
+  --color-primary-contrast: #000000;
+  --color-text: #ffffff;
+}
+
 * {
-  font-family: Helvetica;
+  font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
 body {
-  background-color: #000;
-  color: white;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+}
+
+/* Prevent slight horizontal scrolling caused by overflowing elements */
+html, body {
+  overflow-x: hidden;
+}
+
+/* Ensure images don't introduce overflow */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
 a {
   text-decoration: none;
-  color: #f7d354;
-  transition: 0.5s;
+  color: var(--color-primary);
+  transition: 0.3s;
 }
 
 a:hover {
-  color: #b8930c;
+  color: var(--color-primary-hover);
 }
